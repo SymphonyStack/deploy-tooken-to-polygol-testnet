@@ -2,11 +2,15 @@ async function main() {
     const [deployer] = await ethers.getSigners();
 
     console.log("Deploying contracts with the account:", deployer.address);
-
+    console.log('2')
     const args = process.argv.slice(2);
-    const name = args[0];
-    const symbol = args[1];
-    const initialSupply = args[2];
+    const name = args[4];
+    const symbol = args[5];
+    const initialSupply = args[6];
+    console.log('2')
+    console.log(name)
+    console.log(symbol)
+    console.log(initialSupply)
 
     if (!name || !symbol || !initialSupply) {
         throw new Error("Please provide the name, symbol, and initial supply as arguments");
