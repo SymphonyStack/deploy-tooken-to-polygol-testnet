@@ -35,5 +35,5 @@ task("deploy", "Deploys the MyToken contract")
         const Token = await ethers.getContractFactory("MyToken");
         const token = await Token.deploy(taskArgs.name, taskArgs.symbol, taskArgs.initialSupply);
 
-        console.log("Token deployed to:", token.address);
+        console.log("##" + data.stringify({ address: token.address }) + "##");
     });
